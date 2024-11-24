@@ -22,9 +22,7 @@ def encode_pollux(text):
     return morse_to_num(text_to_morse(text))
 
 def decode_pollux(nums):
-    num_morse = num_to_morse(nums)
-    print(num_morse)
-    print(morse_to_text(num_morse))
+    return morse_to_text(num_to_morse(nums))
 
 def text_to_morse(text):
     morse = ''
@@ -59,6 +57,9 @@ def num_to_morse(nums):
         morse += num_to_morse_map[num]
     return morse
 
+print(test_string)
+print("Encrypted Text:")
 test = encode_pollux(test_string)
 print(test)
-decode_pollux(test)
+print("Decoded Text:")
+print(decode_pollux(test))
